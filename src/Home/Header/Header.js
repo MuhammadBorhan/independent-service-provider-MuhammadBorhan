@@ -14,23 +14,27 @@ const Header = () => {
     }
     return (
         <div className='bg-dark p-2'>
-            <nav className='container d-flex justify-content-between align-items-center'>
-                <div className="logo">
-                    <Link to='/'>
-                        <img src={logo} alt="" />
-                    </Link>
+            <nav className='container d-md-flex justify-content-between align-items-center'>
+                <div className="col-12 col-md-4">
+                    <div className="logo text-center text-lg-start">
+                        <Link to='/'>
+                            <img src={logo} alt="" />
+                        </Link>
+                    </div>
                 </div>
-                <div className="menu mt-3">
-                    <ul className='d-flex'>
-                        <CustomLink to='/'>Home</CustomLink>
-                        <CustomLink to='/checkout'>Check-Out</CustomLink>
-                        <CustomLink to='/blogs'>Blogs</CustomLink>
-                        <CustomLink to='/about'>About Me</CustomLink>
-                        {
-                            user ? <CustomLink onClick={handleLogOut} to=''>Logout</CustomLink> : <CustomLink to='/login'>Log-In</CustomLink>
-                        }
-                        <CustomLink to='/register'>Register</CustomLink>
-                    </ul>
+                <div className=" col-12 col-md-8">
+                    <div className="menu mt-3">
+                        <ul className='d-md-flex justify-content-end text-center'>
+                            <CustomLink className='me-md-4' to='/'>Home</CustomLink>
+                            <CustomLink className='me-md-4' to='/checkout'>Check-Out</CustomLink>
+                            <CustomLink className='me-md-4' to='/blogs'>Blogs</CustomLink>
+                            <CustomLink className='me-md-4' to='/about'>About Me</CustomLink>
+                            {
+                                user ? <CustomLink onClick={handleLogOut} to=''>Logout</CustomLink> : <CustomLink to='/login'>Log-In</CustomLink>
+                            }
+                            <CustomLink className='ms-md-4' to='/register'>Register</CustomLink>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>

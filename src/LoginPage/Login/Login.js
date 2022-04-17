@@ -1,4 +1,3 @@
-import { sendEmailVerification } from 'firebase/auth';
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';

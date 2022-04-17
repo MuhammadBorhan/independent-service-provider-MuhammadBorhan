@@ -1,0 +1,10 @@
+.curriculum-title {
+    border-bottom: 2px dotted blueviolet;
+    width: 300px;
+    margin: auto;
+}
+
+.curriculum span {
+    font-size: 40px;
+    color: cornflowerblue;
+}

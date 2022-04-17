@@ -7,17 +7,18 @@ import './Register.css';
 
 const Register = () => {
     const [error, setError] = useState('');
-    const [createUserWithEmailAndPassword, user, loading, userError] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, user, loading, userError] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+
+    if (user) {
+        navigate('/login');
+    }
 
     if (googleUser) {
         navigate('/checkout')
     }
 
-    if (user) {
-        navigate('/login');
-    }
     const handleCreateUser = event => {
         event.preventDefault();
 

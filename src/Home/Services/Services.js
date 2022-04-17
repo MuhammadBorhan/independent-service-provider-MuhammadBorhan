@@ -11,7 +11,7 @@ const Services = () => {
     return (
         <div className='py-5'>
             <div className='text-center'>
-                <h1>My Service Tutor</h1>
+                <h1>My Services</h1>
             </div>
             <div className="container">
                 <div className="row">

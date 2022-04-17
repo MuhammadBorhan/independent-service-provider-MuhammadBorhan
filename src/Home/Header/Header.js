@@ -1,16 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CustomLink from '../../CustomLink/CustomLink';
 import logo from '../../images/logo/tutor2.png';
+import './Header.css';
 
 const Header = () => {
     return (
-        <div className='bg-dark'>
-            <nav className='container d-flex'>
+        <div className='bg-dark p-2'>
+            <nav className='container d-flex justify-content-between align-items-center'>
                 <div className="logo">
-                    <img height={150} src={logo} alt="" />
+                    <Link to='/'>
+                        <img src={logo} alt="" />
+                    </Link>
                 </div>
-                <div className="menu">
-                    <ul>
+                <div className="menu mt-3">
+                    <ul className='d-flex'>
                         <CustomLink to='/'>Home</CustomLink>
                         <CustomLink to='/checkout'>Check-Out</CustomLink>
                         <CustomLink to='/blogs'>Blogs</CustomLink>

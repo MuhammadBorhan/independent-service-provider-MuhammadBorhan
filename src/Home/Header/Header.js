@@ -1,10 +1,17 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import CustomLink from '../../CustomLink/CustomLink';
+import auth from '../../Firebase/Firebase.init';
 import logo from '../../images/logo/tutor2.png';
 import './Header.css';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const handleLogOut = () => {
+        signOut(auth)
+    }
     return (
         <div className='bg-dark p-2'>
             <nav className='container d-flex justify-content-between align-items-center'>
@@ -19,7 +26,9 @@ const Header = () => {
                         <CustomLink to='/checkout'>Check-Out</CustomLink>
                         <CustomLink to='/blogs'>Blogs</CustomLink>
                         <CustomLink to='/about'>About Me</CustomLink>
-                        <CustomLink to='/login'>Log-In</CustomLink>
+                        {
+                            user ? <CustomLink onClick={handleLogOut} to=''>Logout</CustomLink> : <CustomLink to='/login'>Log-In</CustomLink>
+                        }
                         <CustomLink to='/register'>Register</CustomLink>
                     </ul>
                 </div>

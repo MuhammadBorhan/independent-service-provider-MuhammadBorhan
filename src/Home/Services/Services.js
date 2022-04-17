@@ -9,12 +9,12 @@ const Services = () => {
             .then(data => setService(data))
     }, []);
     return (
-        <div className='container py-5'>
+        <div className='py-5'>
             <div className='text-center'>
-                <h1>Tutor Programs</h1>
+                <h1>My Service Tutor</h1>
             </div>
-            <div className="row">
-                <div>
+            <div className="container">
+                <div className="row">
                     {
                         service.map(lesson => <SingleService key={lesson.id} lesson={lesson}></SingleService>)
                     }

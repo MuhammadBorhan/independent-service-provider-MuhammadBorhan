@@ -1,21 +1,24 @@
 [
     {
         "id": 1,
-        "name": "Eagg Fry",
+        "name": "Artificial",
         "price": 44,
-        "img": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        "img": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "desc": "The definition of artificial refers to something that is simulated or made by humans, not by nature."
     },
     {
         "id": 2,
-        "name": "Lichita Juice",
+        "name": "Flowchart",
         "price": 38,
         "email": "Shanna@melissa.tv",
-        "img": "https://images.unsplash.com/photo-1532619187608-e5375cab36aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        "img": "https://images.unsplash.com/photo-1532619187608-e5375cab36aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "desc": "flowchart is a visual representation of the sequence of steps and decisions needed to perform a process."
     },
     {
         "id": 3,
-        "name": "Beef Fry",
+        "name": "Database",
         "price": 50,
-        "img": "https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        "img": "https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "desc": "database is an organized collection of structured information, or data, typically stored electronically in a computer system."
     }
 ]

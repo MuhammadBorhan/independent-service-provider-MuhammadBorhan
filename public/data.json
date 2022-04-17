@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "Eagg Fry",
+        "price": 44,
+        "img": "https://unsplash.com/photos/5fNmWej4tAA"
+    },
+    {
+        "id": 2,
+        "name": "Lichita Juice",
+        "price": 38,
+        "email": "Shanna@melissa.tv",
+        "img": "https://unsplash.com/photos/7lryofJ0H9s"
+    },
+    {
+        "id": 3,
+        "name": "Beef Fry",
+        "price": 50,
+        "img": "https://unsplash.com/photos/HJckKnwCXxQ"
+    },
+    {
+        "id": 4,
+        "name": "Tomato soss",
+        "price": 40,
+        "img": "https://i.ibb.co/0QZ1Mtz/breakfast4.png"
+    },
+    {
+        "id": 5,
+        "name": "Bread Fry",
+        "price": 48,
+        "img": "https://i.ibb.co/tKWp220/breakfast5.png"
+    },
+    {
+        "id": 6,
+        "name": "Eagg Mumlet",
+        "price": 25,
+        "img": "https://i.ibb.co/QcBFNd1/breakfast6.png"
+    }
+]

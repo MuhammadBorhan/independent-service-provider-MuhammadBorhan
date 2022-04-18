@@ -1,10 +1,26 @@
-# Getting Started with Create React App
+# Tutor-Home
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Site Link: https://sparkly-travesseiro-3c9d55.netlify.app/
 
-## Available Scripts
+## Everything I did in this assignment:
 
-In the project directory, you can run:
+*Service-section in Home page.
+*login route page with logout using ternary operator.
+*Register route for create new user.
+*RequireAuth page for checkout route.
+*Blogs route for three question with answer.
+*About-Me route for About myself.
+*Add Extra section in home page.
+*Header and footer section.
+*Reset button for forget password.
+
+## List of framework and libraries:
+*React Bootstrap.
+*React Router.
+*React-firebase.
+*React-firebase-hooks.
+*React fontwasome.
+*React toastify.
 
 ### `npm start`
 

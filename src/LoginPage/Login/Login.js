@@ -3,6 +3,8 @@ import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/Firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 
 const Login = () => {
@@ -57,8 +59,9 @@ const Login = () => {
                 <p className='text-center mt-1 fw-bold'>New User? <Link to="/register">Resister</Link> </p>
                 <p className='text-center mt-1 fw-bold'>Forget Password? <button className='btn btn-link fw-bold text-primary' onClick={async () => {
                     await sendPasswordResetEmail(emails);
-                    alert('Sent email');
+                    toast("Sent Email for reset password");
                 }}>Reset Password</button> </p>
+                <ToastContainer />
                 <div className='text-center'>
                     <Link to=''>
                         <button onClick={() => signInWithGoogle()}>

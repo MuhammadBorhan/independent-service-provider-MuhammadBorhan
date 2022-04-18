@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/Firebase.init';
 import './Login.css';
 
 const Login = () => {
+    const [emails, setEmails] = useState('');
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const navigate = useNavigate();
     const location = useLocation();
     if (googleUser) {
         navigate('/checkout')
+    }
+
+    if (sending) {
+        return <p className='text-center text-primary fs-2 fw-bold reset-pass'>Sending...</p>
     }
 
     const from = location.state?.from?.pathname || "/checkout";
@@ -26,13 +32,14 @@ const Login = () => {
         const password = event.target.password.value;
         signInWithEmailAndPassword(email, password)
     }
+
     return (
         <div className='container login-form'>
             <h3 className='text-center mt-3 text-success fw-bold'>Please Login</h3>
-            <Form onSubmit={handleSignIn} className='w-50 mx-auto p-2 border my-3'>
+            <Form onSubmit={handleSignIn} className='w-50 mx-auto p-2 border '>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name="email" placeholder="Enter email" required />
+                    <Form.Control type="email" name="email" onChange={(e) => setEmails(e.target.value)} placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -48,6 +55,10 @@ const Login = () => {
                     Login
                 </Button>
                 <p className='text-center mt-1 fw-bold'>New User? <Link to="/register">Resister</Link> </p>
+                <p className='text-center mt-1 fw-bold'>Forget Password? <button className='btn btn-link fw-bold text-primary' onClick={async () => {
+                    await sendPasswordResetEmail(emails);
+                    alert('Sent email');
+                }}>Reset Password</button> </p>
                 <div className='text-center'>
                     <Link to=''>
                         <button onClick={() => signInWithGoogle()}>

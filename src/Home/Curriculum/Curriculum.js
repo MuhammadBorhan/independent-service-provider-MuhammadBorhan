@@ -6,7 +6,7 @@ import './Curriculum.css';
 const Curriculum = () => {
     return (
         <div className='py-5 curriculum'>
-            <h1 className='curriculum-title'>Extra curriculum</h1>
+            <h1 className='curriculum-title text-center'>Extra curriculum</h1>
             <div className="container text-center mt-3">
                 <div className="row">
                     <div className="col-md-4">

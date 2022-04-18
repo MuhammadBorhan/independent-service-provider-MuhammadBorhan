@@ -4,23 +4,23 @@ Live Site Link: https://sparkly-travesseiro-3c9d55.netlify.app/
 
 ## Everything I did in this assignment:
 
-*Service-section in Home page.
-*login route page with logout using ternary operator.
-*Register route for create new user.
-*RequireAuth page for checkout route.
-*Blogs route for three question with answer.
-*About-Me route for About myself.
-*Add Extra section in home page.
-*Header and footer section.
-*Reset button for forget password.
+* Service-section in Home page.
+* login route page with logout using ternary operator.
+* Register route for create new user.
+* RequireAuth page for checkout route.
+* Blogs route for three question with answer.
+* About-Me route for About myself.
+* Add Extra section in home page.
+* Header and footer section.
+* Reset button for forget password.
 
 ## List of framework and libraries:
-*React Bootstrap.
-*React Router.
-*React-firebase.
-*React-firebase-hooks.
-*React fontwasome.
-*React toastify.
+* React Bootstrap.
+* React Router.
+* React-firebase.
+* React-firebase-hooks.
+* React fontwasome.
+* React toastify.
 
 ### `npm start`
 
